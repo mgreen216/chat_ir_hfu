@@ -3,4 +3,4 @@ openai
 llama-index
 nltk
 tableauserverclient
-pypdf
+PyPDF2
