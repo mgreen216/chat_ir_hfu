@@ -18,7 +18,7 @@ if "messages" not in st.session_state.keys(): # Initialize the chat messages his
 @st.cache_resource(show_spinner=False)
 def load_data():
     with st.spinner(text="⏳ Loading and indexing the data 📈 – hang tight! This should take 1-2 minutes."):
-        reader = SimpleDirectoryReader(input_dir="./data2", recursive=True)
+        reader = SimpleDirectoryReader(input_dir="./data", recursive=True)
         docs = reader.load_data()
         service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo", temperature=0.5, system_prompt="You are an expert on Holy Family University https://www.holyfamily.edu . Assume that all questions are related to the Holy Family University and the information related to the Fact book. Keep your answers technical and based on facts – do not hallucinate information."))
         index = VectorStoreIndex.from_documents(docs, service_context=service_context)
