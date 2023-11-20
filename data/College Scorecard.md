@@ -7,7 +7,7 @@
 holyfamily.edu
 ```
 ```
-Ye a r Private
+4-Year Private
 Nonprofit
 ```
 ```
@@ -34,9 +34,7 @@ Roman Catholic
 ```
 Midpoint for 4-yr Schools Midpoint for All Schools
 ```
-## Graduation Rate
-
-## 64%
+## Graduation Rate 64%
 
 ```
 Midpoint for 4-yr Schools: 58%
