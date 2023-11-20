@@ -7,7 +7,7 @@ import tableauserverclient as TSC
 
 st.set_page_config(page_title="Chat with the Holy Family Factbook, Blue Facts 🐯 ", page_icon="🐾", layout="centered", initial_sidebar_state="auto", menu_items=None)
 openai.api_key = st.secrets.openai_key
-st.title("Chat with the Holy Family Factbook, Blue Facts 💬🐅 ")
+st.title("Chat with the Holy Family Factbook, Blue Facts 🐅 💬")
 st.info("Check out the full Factbook at the our university page (https://public.tableau.com/app/profile/hfuieti/vizzes)", icon="📊")
          
 if "messages" not in st.session_state.keys(): # Initialize the chat messages history
