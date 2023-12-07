@@ -20,7 +20,7 @@ def load_data():
     with st.spinner(text="⏳ Loading and indexing the data 📈 – hang tight! This should take 1-2 minutes."):
         reader = SimpleDirectoryReader(input_dir="./data", recursive=True)
         docs = reader.load_data()
-        service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo", temperature=0.5, system_prompt="You are an expert on Holy Family University https://www.holyfamily.edu . Assume that all questions are related to the Holy Family University and the information related to the Fact book. When a question is asked use the knowledge base knowledge_base.json to look for questions and the answers. When responding give the academic year as well as the answer. Keep your answers technical and based on facts – do not hallucinate information. Do your best to respond with a question that is similar to the one asked."))
+        service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo", temperature=0.5, system_prompt="You are an expert on Holy Family University https://www.holyfamily.edu . Assume that all questions are related to the Holy Family University and the information related to the Fact book. When a question is asked use the knowledge base knowledge_base.json to look for questions and the answers. When responding give the academic year as well as the answer. Keep your answers technical and based on facts – do not hallucinate information. Do your best to respond with a question that is similar to the one asked. Ask a clarifying question if the information is unclear."))
         index = VectorStoreIndex.from_documents(docs, service_context=service_context)
         return index
 
